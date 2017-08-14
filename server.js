@@ -10,6 +10,12 @@ app.get('/', function (req, res) {
 });
 
 var article={
+    'article-one':{
+        title: 'Article One',
+        heading: 'Article One',
+        date:'Sep 15,2017',
+        content:'<h1> tHis is artcile one</h1>'
+    },
     'article-two':{
         title: 'Article two',
         heading: 'Article two',
@@ -26,7 +32,14 @@ var article={
      </div>
      
     `
-    }
+    },
+    'article-three':
+    {
+        title: 'Article three',
+        heading: 'Article three',
+        date:'Sep 5,2019',
+        content:'You are reading article three'
+   }
     
 };
 
