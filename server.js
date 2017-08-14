@@ -25,14 +25,7 @@ var articles={
      <p>I am typing my first articleI am typing my first articleI am typing my first articleI am typing my first articleI am typing my first articleI am typing my first articleI am typing my first articleI am typing my first articleI am typing my first articleI am typing my first articleI am typing my first articleI am typing my first articleI am typing my first articleI am typing my first articleI am typing my first article</p>
      </div>
             
-        `,
-     content1:`
-     <div class="container1">
-     <p>This is getting boring but im serious<br>This is getting boring but im serious<br>This is getting boring but im serious<br>This is getting boring but im serious<br>This is getting boring but im serious<br>This is getting boring but im serious<br>This is getting boring but im serious<br>This is getting boring but im serious<br></p>
-     </div>
-     
-    `
-    },
+        `},
     'article-three':{
         title: 'Article three',
         heading: 'Article three',
