@@ -52,9 +52,6 @@ function createTemplate(data){
                     <div class="container">
                     <p>${content}</p>
                     </div>
-                    <div class="container1">
-                    <p>${content1}</p>
-                    </div>
                   </body>
                  </html>
                `;
