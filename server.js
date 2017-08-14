@@ -8,17 +8,63 @@ app.use(morgan('combined'));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-
-
-app.get('/article-one',function(req,res){
-  res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));   
-    });
-
-
-app.get('/article-two',function(req,res){
-   res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
-    });
+var content={
     
+}
+
+var article={
+    'article-two':{
+        title: 'Article two',
+        heading: 'Article two',
+        date:'Sep 5,2017',
+        content:
+        `<div class="container">
+     <p>I am typing my first articleI am typing my first articleI am typing my first articleI am typing my first articleI am typing my first articleI am typing my first articleI am typing my first articleI am typing my first articleI am typing my first articleI am typing my first articleI am typing my first articleI am typing my first articleI am typing my first articleI am typing my first articleI am typing my first article</p>
+     </div>
+            
+        `,
+     content1:`
+     <div class="container1">
+     <p>This is getting boring but im serious<br>This is getting boring but im serious<br>This is getting boring but im serious<br>This is getting boring but im serious<br>This is getting boring but im serious<br>This is getting boring but im serious<br>This is getting boring but im serious<br>This is getting boring but im serious<br></p>
+     </div>
+     
+    `
+    }
+    
+};
+
+function createTemplate(data){
+    var title= data.title; 
+    var heading= data.heading;
+    var date= data.date;
+    var content= data.content;
+    var htmlTemplate=`<html>
+                   <head>
+                     <title> ${title}</title>
+                     <meta name="viewport" content="width=device-width,initial-scale=1"/>
+                     <link href="/ui/style.css" rel="stylesheet"/>
+                   </head>
+
+                   <body>
+                    <h3>${heading}</h3>
+                    <hr>
+                    <div class="container">
+                    <p>${content}</p>
+                    </div>
+                    <div class="container1">
+                    <p>${content1}</p>
+                    </div>
+                  </body>
+                 </html>
+               `;
+    return htmlTemplate;
+}
+app.get('/:articleName',function(req,res){
+  var articleName=req.params.articleName;
+  res.send(createTemplate(articles[articleName]));   
+    });
+
+
 app.get('/article-three',function(req,res){
     res.send('Article three requested'); 
     });
