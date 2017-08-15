@@ -39,7 +39,13 @@ var articles={
         content:'You are reading article three'
    }
 };
-
+var names = [];
+app.get('/submit-name',function(req,res){
+    var name = req.query.name;
+    names.push(name);
+    res.send(JSON.stringify(names));
+    
+});
 function createTemplate(data){
     var title= data.title; 
     var heading= data.heading;
@@ -64,13 +70,7 @@ function createTemplate(data){
     return htmlTemplate;
 }
 
-var names = [];
-app.get('/submit-name',function(req,res){
-    var name = req.query.name;
-    names.push(name);
-    res.send(JSON.stringify(names));
-    
-});
+
 
 app.get('/:articleName',function(req,res){
   var articleName=req.params.articleName;
