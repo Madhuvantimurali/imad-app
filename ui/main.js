@@ -6,7 +6,7 @@ button.onclick = function(){
     var request = new XMLHttpRequest();
     request.onreadystatechange = function(){
         console.log("State change")
-        if(request.readystate === XMLHttpRequest.DONE){
+        if(request.readyState === XMLHttpRequest.DONE){
             console.log("Checking if done");
             if(request.status === 200){
                 console.log("generating counter");
