@@ -11,7 +11,7 @@ button.onclick = function(){
             if(request.status === 200){
                 console.log("generating counter");
                 var counter = request.responseText;
-                counter++;
+                counter = counter + 1;
                 console.log(counter);
                 var span = document.getElementById('count');
                 span.innerHTML = counter.toString();
