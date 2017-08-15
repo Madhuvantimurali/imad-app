@@ -2,11 +2,13 @@
 console.log("im here");
 var button = document.getElementById('counter');
 button.onclick = function(){
-    
+    console.log("at onclick event")
     var request = new XMLHttpRequest();
     request.onreadystatechange = function(){
+        console.log("State change")
         if(request.readystate === XMLHttpRequest.DONE){
             if(request.status === 200){
+                console.log("generating counter");
                 var counter = request.responseText;
                 var span = document.getElementById('count');
                 span.innerHTML = counter.toString();
