@@ -1,4 +1,5 @@
 //counter code
+console.log("im here");
 var button = document.getElementById('counter');
 button.onclick = function(){
     
