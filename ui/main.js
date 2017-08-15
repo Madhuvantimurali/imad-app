@@ -9,9 +9,8 @@ button.onclick = function(){
         if(request.readyState === XMLHttpRequest.DONE){
             console.log("Checking if done");
             if(request.status === 200){
-                console.log("generating counter");
                 var counter = request.responseText;
-                counter = counter + 1;
+                //counter = counter + 1;
                 console.log(counter);
                 var span = document.getElementById('count');
                 span.innerHTML = counter.toString();
