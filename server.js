@@ -4,10 +4,10 @@ var path = require('path');
 var Pool = require('pg').Pool;
 
 var config={
-    user: madhuvantimuralik,
+    user:madhuvantimuralik,
     database:madhuvantimuralik,
-    host: 'db.imad.hasua-app.io',
-    password: process.env.DB_PASSWORD
+    host:'db.imad.hasua-app.io',
+    password:process.env.DB_PASSWORD
 };
 var app = express();
 app.use(morgan('combined'));
