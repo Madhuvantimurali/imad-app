@@ -15,7 +15,7 @@ app.use(morgan('combined'));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-
+/*
 var pool = new Pool(config);
 app.get('/test-db',function(req,res){
     pool.query('SELECT * from test',function(err,result){
@@ -28,7 +28,7 @@ app.get('/test-db',function(req,res){
         }
     });
     
-});
+});*/
 var counter = 0;
 app.get('/counter',function(req,res){
    counter = counter + 1;
