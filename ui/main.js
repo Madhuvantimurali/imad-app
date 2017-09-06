@@ -33,7 +33,7 @@ submit.onclick = function()
                console.log('user logged in successfully');
                alert('Login Successful');
                var span= document.getElementById('login');
-               span.innerHTML="<input type=submit value='logout' id='logout'/>";
+               span.innerHTML=" Please choose articles from list below";
             }
             else if(request.status === 403){
                 alert('Username/password is incorrect');
