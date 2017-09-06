@@ -4,7 +4,7 @@ var path = require('path');
 var Pool = require('pg').Pool;
 var crypto = require('crypto');
 var bodyParser = require('body-parser');
-
+var session = require('express-session');
 var config={
     user:'madhuvantimuralik',
     database:'madhuvantimuralik',
@@ -15,7 +15,10 @@ var config={
 var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
-
+app.use(session({
+    secret:'randomSecretvalue',
+    cookie:{maxAge: 1000 * 60 *60* 24 * 30} 
+}));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -93,6 +96,7 @@ app.post('/login',function(req,res){
    });
     
 });
+
 var counter = 0;
 app.get('/counter',function(req,res){
    counter = counter + 1;
