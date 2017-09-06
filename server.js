@@ -55,7 +55,7 @@ app.get('/submit-name',function(req,res){
     
 });
 
-//var articles={
+/*var articles={
     'article-one':{
         title: 'Article One',
         heading: 'Article One',
@@ -79,7 +79,7 @@ app.get('/submit-name',function(req,res){
         content:'You are reading article three'
    }
 };
-
+*/
 function createTemplate(data){
     var title= data.title; 
     var heading= data.heading;
