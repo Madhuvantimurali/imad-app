@@ -64,9 +64,8 @@ app.post('/create-user',function(req,res){
 });
 
 app.post('/login',function(req,res){
-var username = req.body.username;
+   var username = req.body.username;
    var password = req.body.password;
-   res.send(JSON.stringify(password));
    
    pool.query('SELECT * FROM "user" WHERE username=$1',[username],function(err,result){
        if(err){
@@ -79,7 +78,7 @@ var username = req.body.username;
             }
             else{
             //match password
-            var dbString = result.rows[0].password;
+            var dbString = result.rows[0].password.split('$')[3];
             var salt= dbString.split('$')[2];
             
             var hashedPassword = hash(password,salt);
