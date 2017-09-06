@@ -26,9 +26,9 @@ body {
 .img-medium {
     height: 200px;
 }
-.footer{
+.loginpage{
     text-align: center;
-    
+    font-size: 200%;
 }
 .names{
     text-align: center;
