@@ -70,8 +70,6 @@ logout.onclick = function()
         }    
      }
     };
-    /*var username= document.getElementById('username').value;
-    var password= document.getElementById('password').value;*/
     request.open('GET','http://madhuvantimuralik.imad.hasura-app.io/logout',true);
     request.setRequestHeader('Content-Type','application/json');
     request.send(JSON.stringify({username: username,password: password}));
