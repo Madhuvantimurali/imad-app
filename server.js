@@ -78,7 +78,7 @@ app.post('/login',function(req,res){
             }
             else{
             //match password
-            var dbString = result.rows[1].password.split('$')[3];
+            var dbString = result.rows[0].password.split('$')[3];
             var salt= dbString.split('$')[2];
             
             var hashedPassword = hash(password,salt);
@@ -86,7 +86,7 @@ app.post('/login',function(req,res){
              res.send("Credentials are correct");   
              }
             else{
-            res.status(403).send("Invalid with guven pass ="+ hashedPassword);    
+            res.status(403).send("Invalid with given pass ="+ hashedPassword);    
             }
             }
         }
