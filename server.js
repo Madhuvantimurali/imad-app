@@ -61,7 +61,7 @@ app.post('/create-user',function(req,res){
         }
         else
         {
-            res.send("User created successfully"+username);
+            res.send("User created successfully "+ username);
         }
    });
 });
@@ -86,7 +86,11 @@ app.post('/login',function(req,res){
             
             var hashedPassword = hash(password,salt);
             if(hashedPassword === dbString){
+                //Set the session
+             
+             req.session.auth = {userId: result.rows[0].id};   
              res.send("Credentials are correct");   
+             
              }
             else{
             res.status(403).send("Invalid");    
@@ -97,6 +101,14 @@ app.post('/login',function(req,res){
     
 });
 
+app.get('/check-login',function(req,res){
+   if(req.session && req.session.auth && req.session.auth.userId){
+       res.send('You are logged in '+ userId);
+   } 
+   else{
+       res.send('Not logged in');
+   }
+});
 var counter = 0;
 app.get('/counter',function(req,res){
    counter = counter + 1;
