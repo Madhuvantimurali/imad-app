@@ -32,7 +32,7 @@ submit.onclick = function()
             if(request.status === 200){
                console.log('user logged in successfully');
                alert('Login Successful');
-               var logged= document.getElementById('login');
+               var logged= document.getElementById('submit_btn');
                logged.innerHTML=" Please choose articles from list below";
             }
             else if(request.status === 403){
