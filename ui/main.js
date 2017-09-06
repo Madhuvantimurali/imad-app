@@ -32,6 +32,8 @@ submit.onclick = function()
             if(request.status === 200){
                console.log('user logged in successfully');
                alert('Login Successful');
+               var span= document.getElementById('login');
+               span.innerHTML="<input type=submit value='logout' id='logout'/>";
             }
             else if(request.status === 403){
                 alert('Username/password is incorrect');
@@ -48,4 +50,5 @@ submit.onclick = function()
     request.send(JSON.stringify({username: username,password: password}));
 };        
   
+ //logout
  
