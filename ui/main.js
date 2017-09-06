@@ -52,7 +52,7 @@ submit.onclick = function()
   
  //logout
  var logout= document.getElementById('logout');
-submit.onclick = function()
+logout.onclick = function()
 {
   
   var request = new XMLHttpRequest();
