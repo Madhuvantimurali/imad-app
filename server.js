@@ -172,7 +172,7 @@ function createTemplate(data){
                     <div class="container">
                     <p>${content}</p>
                     </div>
-                    <input type="textarea" width="500" height="200" placeholder="Type comments here"/>
+                    <input type="text" width="500" height="200" placeholder="Type comments here"/>
                     <input type="submit" id="comment_sub"/>
                   </body>
                  </html>
