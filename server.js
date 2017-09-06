@@ -84,7 +84,7 @@ var username = req.body.username;
              res.send("Credentials are correct");   
             }
             else{
-            res.status(403).send("Invalid "+ salt );    
+            res.status(403).send("Invalid "+ dbString+ " " + hashedPassword );    
             }
             }
         }
