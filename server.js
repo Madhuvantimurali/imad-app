@@ -78,7 +78,7 @@ app.post('/login',function(req,res){
             }
             else{
             //match password
-            var dbString = result.rows[0].password.split('$')[3];
+            var dbString = result.rows[0].password;
             var salt= dbString.split('$')[2];
             
             var hashedPassword = hash(password,salt);
