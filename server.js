@@ -166,7 +166,7 @@ function createTemplate(data){
                    </head>
 
                    <body>
-                   <a href="http://madhuvantimuralik.imad.hasura-app.io/">logout</a>
+                   <a href="http://madhuvantimuralik.imad.hasura-app.io/">Home</a>
                     <h3>${heading}</h3>
                     <hr>
                     <div class="container">
