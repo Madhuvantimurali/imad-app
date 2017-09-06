@@ -74,7 +74,7 @@ var username = req.body.username;
         else
         {
             if(result.rows.length === 0){
-                res.status(403).send('username/password is inavlid');
+                res.status(403).send('username/password is invalid');
             }
             else{
             var dbString = result.rows[0].password;
@@ -82,9 +82,9 @@ var username = req.body.username;
             var hashedPassword = hash(password,salt);
             if(hashedPassword === dbString){
              res.send("Credentials are correct");   
-            }
+             }
             else{
-            res.status(403).send("Invalid "+ dbString+ " " + hashedPassword );    
+            res.status(403).send("Invalid ");    
             }
             }
         }
