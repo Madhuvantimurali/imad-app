@@ -60,6 +60,7 @@ logout.onclick = function()
         if(request.readyState === XMLHttpRequest.DONE){
             if(request.status === 200){
                alert('Are you sure?');
+               console.log('User logged out');
             }
             else if(request.status === 403){
                 alert('Username/password is incorrect');
