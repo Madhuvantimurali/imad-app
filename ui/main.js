@@ -13,7 +13,7 @@ register.onclick=function()
                 alert('Something went wrong with the server');
         }    
      }
-  
+    }; 
 };
     var username= document.getElementById('username').value;
     var password= document.getElementById('password').value;
