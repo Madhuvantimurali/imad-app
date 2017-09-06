@@ -109,6 +109,10 @@ app.get('/check-login',function(req,res){
        res.send('Not logged in');
    }
 });
+app.get('/logout',function(req,res){
+    delete req.session.auth.userId;
+    res.send('Logged out');
+});
 var counter = 0;
 app.get('/counter',function(req,res){
    counter = counter + 1;
