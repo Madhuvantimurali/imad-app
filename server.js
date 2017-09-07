@@ -68,7 +68,7 @@ app.post('/create-user',function(req,res){
 
 app.post('/login',function(req,res){
    var username = req.body.username;
-   var password = req.body.password;
+   var password = req.body.password;  
    
    pool.query('SELECT * FROM "user" WHERE username=$1',[username],function(err,result){
        if(err){
@@ -113,7 +113,7 @@ app.get('/check-login',function(req,res){
 app.get('/logout',function(req,res){
     delete req.session.auth.userId;
     res.send('Logged out');
-});
+}); 
 var counter = 0;
 app.get('/counter',function(req,res){
    counter = counter + 1;
